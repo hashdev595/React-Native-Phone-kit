@@ -7,4 +7,5 @@ export const appIcons = {
 
 export const appImages = {
   personImage: require('../assets/images/person.png'),
+  personImage: require('../assets/images/otp.webp'),
 };

@@ -15,7 +15,7 @@ const SignUp = ({navigation}) => {
             <Text style={styles.headerText}>Sign Up</Text>
           </View>
           <View style={{width: '15%', justifyContent:'center'}}>
-            <Text style={styles.touchableText}>Login</Text>
+            <Text onPress={()=> navigation.navigate('Login')} style={styles.touchableText}>Login</Text>
           </View>
         </View>
       <AppInput lable={'Name'} placeholder={'Name'}/>

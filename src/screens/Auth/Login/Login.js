@@ -44,7 +44,7 @@ const Login = ({navigation}) => {
         </View>
       </View>
       <View>
-        <Text style={styles.touchableText}>Forgot your password?</Text>
+        <Text onPress={()=> navigation.navigate('ForgotPassword')} style={styles.touchableText}>Forgot your password?</Text>
       </View>
       <View style={{position: 'absolute', bottom: 25, alignSelf: 'center'}}>
         <Text style={styles.plainText}>Don't have an account?</Text>

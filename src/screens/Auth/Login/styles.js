@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     
   },
   mainContainer2:{
-    marginHorizontal:12
+    marginHorizontal:12,
   },
   headerContainer: {
     height: 40,

@@ -12,7 +12,7 @@ const MainStack = () => {
       <Stack.Navigator
         initialRouteName={'Auth'}
         screenOptions={{
-          headerShown: true,
+          headerShown: false,
         }}>
         <Stack.Screen name={'App'} component={AppStack} />
         <Stack.Screen name={'Auth'} component={AuthStack} />
