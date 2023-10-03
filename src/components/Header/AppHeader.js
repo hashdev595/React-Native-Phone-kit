@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
-import {appIcons} from '../../assets';
+
 
 const AppHeader = ({heading, rightlable, onpress, onPress, source}) => {
   return (
@@ -21,25 +21,28 @@ const AppHeader = ({heading, rightlable, onpress, onPress, source}) => {
 
 const styles = StyleSheet.create({
   mainHeaderContainer: {
+    justifyContent:'space-between',
+    alignItems:'center',
     width: '100%',
     // backgroundColor: 'red',
-    height: 45,
-    marginVertical: 20,
+    height: 40,
+    marginTop: 15,
     flexDirection:'row'
   },
   headerText: {
     fontSize: 30,
     color: 'black',
     textAlign: 'center',
+    fontWeight:'600'
   },
   rightContainer: {
     // backgroundColor:'yellow',
-    width: '10%',
+    width: '12%',
     alignItems:'center',
     justifyContent:'center',
   },
   leftContainer: {
-    width: '10%',
+    width: '12%',
     // backgroundColor:'blue',
     resizeMode:'contain',
     alignItems:'center',
@@ -48,7 +51,7 @@ const styles = StyleSheet.create({
   headerContainer:{
     alignItems:'center',
     justifyContent:'center',
-    width:'80%'
+    widths:'76%'
   },
   rightTextStyle:{
     color:'green',

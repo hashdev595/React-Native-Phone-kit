@@ -3,19 +3,14 @@ import React from 'react';
 import {styles} from './styles';
 
 import {appIcons} from '../../../assets';
-import { AppButton, AppInput } from '../../../components';
+import { AppButton, AppHeader, AppInput } from '../../../components';
 
 
 const ForgotPassword = ({navigation}) => {
   return (
     <View style={styles.mainContainer1}>
       <View style={styles.mainContainer2}>
-        <View style={styles.headerContainer}>
-          <TouchableOpacity onPress={()=> navigation.goBack()}>
-         <Image  style={styles.imageStyle} source={appIcons.crossIcon} />
-          </TouchableOpacity>
-           <Text style={styles.headerText}>Change Password</Text>
-        </View>
+      <AppHeader heading={'Forgot Password'} source={appIcons.crossIcon} onpress={()=> navigation.goBack()}/>
         <Text style={styles.boldText}>Forgot your password?</Text>
         <Text style={styles.plainText}>
           No worries, we'll help you reset it.

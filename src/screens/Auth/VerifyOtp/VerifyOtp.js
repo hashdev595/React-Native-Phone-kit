@@ -9,9 +9,9 @@ const VerifyOtp = ({navigation}) => {
   return (
     <View style={styles.mainContainer1}>
       <View style={styles.mainContainer2}>
-      <AppHeader onpress={()=> navigation.goBack()}  source={appIcons.crossIcon} heading={'Verify OTP'} rightlable={'filter'}/>
+      <AppHeader onpress={()=> navigation.goBack()}  source={appIcons.crossIcon} heading={'Verify OTP'}/>
       <View style={{alignItems:'center', justifyContent:'center'}}>
-        <Image style={{width:'30%', height:100, resizeMode:'contain'}} source={appImages.personImage}  />
+        <Image style={{width:'30%', height:100, resizeMode:'contain'}} source={appImages.otp}  />
         </View>
         <Text style={styles.boldText}>OTP Verification</Text>
         <Text style={styles.plainText}>Enter OTP code sent to </Text>
