@@ -134,6 +134,7 @@ const Profile = () => {
       {button === 'post' ? (
         <View style={styles.flatlistContainer}>
           <FlatList
+          showsVerticalScrollIndicator={false}
             data={data}
             renderItem={({item}) => (
               <TouchableOpacity style={styles.contentBox}>
@@ -164,7 +165,7 @@ const Profile = () => {
           justifyContent:'space-between',
           alignSelf:'center'
         }}>
-            <FlatList key={3} horizontal={false} numColumns={3} data={data} renderItem={({item})=> (
+            <FlatList showsVerticalScrollIndicator={false} key={3} horizontal={false} numColumns={3} data={data} renderItem={({item})=> (
              
                <Image style={{height:100, width:100, backgroundColor:'green', margin:3, borderRadius:8 }} source={item.image}/>
       )} />

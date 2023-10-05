@@ -11,7 +11,7 @@ import React, {useState} from 'react';
 import {appIcons} from '../../assets';
 
 const AppInput = ({placeholder, lable, secureTextEntry}) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(secureTextEntry);
 
   return (
     <View>
@@ -30,7 +30,7 @@ const AppInput = ({placeholder, lable, secureTextEntry}) => {
         <View style={{width: '90%'}}>
           <TextInput
           placeholderTextColor={'grey'}
-            secureTextEntry={!show}
+            secureTextEntry={show}
             style={styles.inputContainer}
             placeholder={placeholder}
           />
@@ -42,9 +42,9 @@ const AppInput = ({placeholder, lable, secureTextEntry}) => {
                 setShow(!show);
               }}>
               {show ? (
-                <Image style={styles.imageStyle} source={appIcons.eye} />
-              ) : (
                 <Image style={styles.imageStyle} source={appIcons.eyeHide} />
+              ) : (
+                <Image style={styles.imageStyle} source={appIcons.eye} />
               )}
             </TouchableOpacity>
           </View>
