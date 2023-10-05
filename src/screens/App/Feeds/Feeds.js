@@ -40,7 +40,42 @@ const data = [
     content:
       "He'll want to use your yacht, and I don't want this thing smelling like fish.",
     image: appIcons.personIcon,
+  }, {
+    id: 6,
+    heading: 'heading',
+    content:
+      "He'll want to use your yacht, and I don't want this thing smelling like fish.",
+    image: appIcons.personIcon,
   },
+  {
+    id: 7,
+    heading: 'heading',
+    content:
+      "He'll want to use your yacht, and I don't want this thing smelling like fish.",
+    image: appIcons.personIcon,
+  },
+  {
+    id: 8,
+    heading: 'heading',
+    content:
+      "He'll want to use your yacht, and I don't want this thing smelling like fish.",
+    image: appIcons.personIcon,
+  },
+  {
+    id: 9,
+    heading: 'heading',
+    content:
+      "He'll want to use your yacht, and I don't want this thing smelling like fish.",
+    image: appIcons.personIcon,
+  },
+  {
+    id: 10,
+    heading: 'heading',
+    content:
+      "He'll want to use your yacht, and I don't want this thing smelling like fish.",
+    image: appIcons.personIcon,
+  },
+  
 ];
 
 const Feeds = () => {
@@ -61,7 +96,7 @@ const Feeds = () => {
           <FlatList
             data={data}
             renderItem={({item}) => (
-              <ScrollView>
+              // <ScrollView>
                 <TouchableOpacity style={styles.contentBox}>
                   <Image
                     style={styles.imageStyle}
@@ -75,7 +110,7 @@ const Feeds = () => {
                     </Text>
                   </View>
                 </TouchableOpacity>
-              </ScrollView>
+              // {/* </ScrollView> */}
             )}
           />
         </View>

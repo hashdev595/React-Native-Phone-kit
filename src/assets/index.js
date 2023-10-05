@@ -23,4 +23,5 @@ export const appImages = {
   TshirtPrinted: require('../assets/images/Tshirtprinted.png'),
   vocal: require('../assets/images/vocal.png'),
   otp: require('../assets/images/otp.webp'),
+  profile: require('../assets/images/profile.jpeg')
 };

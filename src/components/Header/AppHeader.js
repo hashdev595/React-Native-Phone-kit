@@ -2,18 +2,18 @@ import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 
 
-const AppHeader = ({heading, rightlable, onpress, onPress, source}) => {
+const AppHeader = ({heading, rightlable, onpress, onPress, source, textColor, backgroundColor, rightText}) => {
   return (
-    <View style={styles.mainHeaderContainer}>
+    <View style={[styles.mainHeaderContainer,{backgroundColor:backgroundColor} ]}>
       <View style={styles.leftContainer}>
         <TouchableOpacity onPress={onpress}>
           <Image style={styles.imageStyle} source={source} />
         </TouchableOpacity>
       </View>
       <View style={styles.headerContainer}>
-      <Text style={styles.headerText}>{heading}</Text></View>
+      <Text style={[styles.headerText,{color:textColor}]}>{heading}</Text></View>
       <View style={styles.rightContainer}>
-        <Text style={styles.rightTextStyle} onPress={onPress}>{rightlable}</Text>
+        <Text style={[styles.rightTextStyle,{color:rightText}]} onPress={onPress}>{rightlable}</Text>
       </View>
     </View>
   );
@@ -24,25 +24,26 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     alignItems:'center',
     width: '100%',
-    // backgroundColor: 'red',
-    height: 40,
-    marginTop: 15,
+    backgroundColor: 'red',
+    height: 50,
+    // paddingVertical: 20,
     flexDirection:'row'
   },
   headerText: {
     fontSize: 30,
-    color: 'black',
+    color:'black',
+    // textColor: textColor ? textColor: 'green',
     textAlign: 'center',
     fontWeight:'600'
   },
   rightContainer: {
     // backgroundColor:'yellow',
-    width: '12%',
+    width: '13%',
     alignItems:'center',
     justifyContent:'center',
   },
   leftContainer: {
-    width: '12%',
+    width: '13%',
     // backgroundColor:'blue',
     resizeMode:'contain',
     alignItems:'center',
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
   headerContainer:{
     alignItems:'center',
     justifyContent:'center',
-    widths:'76%'
+    widths:'74%'
   },
   rightTextStyle:{
     color:'green',
@@ -61,7 +62,8 @@ const styles = StyleSheet.create({
     height:20,
     width:20,
     resizeMode:'contain'
-  }
+  },
+
 
 });
 
