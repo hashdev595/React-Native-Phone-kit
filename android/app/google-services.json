@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "560584773651",
+    "project_id": "phonekitapp-dad04",
+    "storage_bucket": "phonekitapp-dad04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560584773651:android:152986404f7506c285afe6",
+        "android_client_info": {
+          "package_name": "com.phonekit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9Abl1qMXcaidzkfpGw9iCjXTbiJqUBsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,7 +10,13 @@ import React, {useState} from 'react';
 
 import {appIcons} from '../../assets';
 
-const AppInput = ({placeholder, lable, secureTextEntry}) => {
+const AppInput = ({
+  placeholder,
+  lable,
+  secureTextEntry,
+  value,
+  onChangeText,
+}) => {
   const [show, setShow] = useState(secureTextEntry);
 
   return (
@@ -29,7 +35,9 @@ const AppInput = ({placeholder, lable, secureTextEntry}) => {
       <View style={styles.secureInput}>
         <View style={{width: '90%'}}>
           <TextInput
-          placeholderTextColor={'grey'}
+            placeholderTextColor={'grey'}
+            onChangeText={onChangeText}
+            value={value}
             secureTextEntry={show}
             style={styles.inputContainer}
             placeholder={placeholder}

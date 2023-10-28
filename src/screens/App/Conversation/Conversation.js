@@ -5,19 +5,16 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
+  StyleSheet,
 } from 'react-native';
-import React, { useEffect } from 'react';
-import {styles} from './styles';
+import React, {useEffect} from 'react';
 import {AppInput} from '../../../components';
 import firestore from '@react-native-firebase/firestore';
-import { firebase } from '@react-native-firebase/app';
+import {firebase} from '@react-native-firebase/app';
 import database from '@react-native-firebase/database';
-
-
+import Icon from 'react-native-vector-icons/Ionicons';
 import {appIcons} from '../../../assets';
-// if (!firebase.apps.length) {
-//   firebase.initializeApp(firebaseConfig);
-// }
+
 const data = [
   {
     id: 1,
@@ -91,39 +88,14 @@ const data = [
   },
 ];
 
-
-
-const Feeds = () => {
-  // const feedCollection = firestore().collection('messages');
-
-  // async function fetchMessages() {
-  //   try {
-  //     const usersRef = database().ref('Users');
-  //     usersRef.on('value', (snapshot) => {
-  //       if (snapshot.exists()) {
-  //         const usersData = snapshot.val();
-  //         const usersArray = Object.values(usersData);
-  //         console.log('userArray',usersArray)
-  //       }
-  //     });
-  
-  //   } catch (error) {
-  //     console.error('Error fetching messages:', error);
-  //   }
-  // }
-
-  // // Call the function when the component is mounted
-  // useEffect(() => {
-  //   fetchMessages();
-  // });
-
+const Conversation = ({navigation}) => {
   return (
     <View style={styles.mainContainer1}>
       <View style={styles.mainContainer2}>
         <View style={styles.headerContainer}>
           <View style={{width: '15%'}}></View>
           <View style={{width: '70%'}}>
-            <Text style={styles.headerText}>Feeds</Text>
+            <Text style={styles.headerText}>Chats</Text>
           </View>
           <View style={{width: '15%'}}>
             <Text style={styles.touchableText}>Filter</Text>
@@ -139,7 +111,6 @@ const Feeds = () => {
           showsVerticalScrollIndicator={false}
           data={data}
           renderItem={({item, index}) => (
-            // <ScrollView>
             <TouchableOpacity
               style={[
                 styles.contentBox,
@@ -160,12 +131,80 @@ const Feeds = () => {
                 </Text>
               </View>
             </TouchableOpacity>
-            // {/* </ScrollView> */}
           )}
         />
+        <TouchableOpacity onPress={()=>{navigation.navigate('Contacts')}} style={styles.addChat}>
+          <Icon name="chatbubbles-outline" size={50} color="green" />
+        </TouchableOpacity>
       </View>
     </View>
   );
 };
 
-export default Feeds;
+export default Conversation;
+
+const styles = StyleSheet.create({
+  mainContainer1: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  mainContainer2: {
+    flex: 1,
+    marginHorizontal: 12,
+    backgroundColor: '#fff',
+  },
+
+  headerText: {
+    fontWeight: '600',
+    fontSize: 30,
+    color: 'black',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+  },
+  flatlistContainer: {
+    flexGrow: 1,
+  },
+  contentContainer: {
+    flexDirection: 'row',
+  },
+  headerContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  plainText: {
+    color: 'black',
+    fontSize: 16,
+  },
+  secondHeaderText: {
+    color: 'black',
+    fontSize: 19,
+    fontWeight: '600',
+  },
+  imageStyle: {
+    height: 50,
+    width: 50,
+  },
+  contentBox: {
+    flexDirection: 'row',
+    width: '100%',
+  },
+  touchableText: {
+    color: '#5DB075',
+    // textAlignVertical: 'center',
+    fontSize: 18,
+  },
+  addChat: {
+    backgroundColor: 'white',
+    borderColor: 'green',
+    borderWidth: 5,
+    borderRadius: 90,
+    width: '20%',
+    height: '9%',
+    alignSelf: 'flex-end',
+    position: 'absolute',
+    bottom: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

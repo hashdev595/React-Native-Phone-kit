@@ -4,7 +4,6 @@ const styles = StyleSheet.create({
   mainContainer1: {
     flex: 1,
     backgroundColor: '#fff',
-    
   },
   mainContainer2:{
     marginHorizontal:12,
